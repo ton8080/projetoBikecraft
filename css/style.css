@@ -1,6 +1,7 @@
 body{
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 00px;
 }
 
 /*Resetando margin, pq por padrão esses elementos têm margin*/
@@ -76,6 +77,10 @@ img{
 .introducao-bg{
   background: #000;
   color: #fff;
+  /* estilo para parecer que a imagem está vazando */
+  box-shadow: inset 0px -120px #fff; /*cria uma sombra interna(inset) e com o negativo, ela vai ficar para baixo, no final do container, dando uma ilusão que a imagem está sendo vazada
+  
+  porem precisa compesar o valor do padding no .introdução conteudo, pois assim ele não irá aparentar que todos os itens estão vazando. Basta adicionar 120px aos 80 dele*/
 }
 
 .introducao{
@@ -92,7 +97,23 @@ img{
 
 .introducao-conteudo{
   align-self: end; /*Alinha o conteudo da div no final*/
-  padding-bottom: 80px; /*da um espaço  */
+  padding-bottom: 200px; /*da um espaço  80px + 120px*/
+}
+
+/*
+Solução 1, mas que vem com problemas para o proximo conteudo
+Vazar imagem, só funciona aqui, pq a imagem vai estar 100% do container(.introducao img), mas a div que envolve ela(.introducao-imagem) vai estar com margem negativa, ou seja, o container da imagem (.introducao-imagem) vaza
+
+adicionar classe a div da imagem caso queira testar*/
+/* .introducao-imagem{
+  margin-bottom: -120px;
+} */
+
+
+.introducao img{
+  height: 100%; /*Define sempre a mesma altura do elemento pai*/
+  object-fit: cover; /*Corta a imagem caso não caiba no width, para não distorcer*/
+  border-radius: 4px;
 }
 
 .introducao h1{
