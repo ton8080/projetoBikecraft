@@ -1,0 +1,28 @@
+body {
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 600px;
+}
+
+/*Resetando margin, pq por padrão esses elementos têm margin*/
+h1,
+ul,
+p {
+  margin: 0px;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; /*Herda a cor do elemento pai*/
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
