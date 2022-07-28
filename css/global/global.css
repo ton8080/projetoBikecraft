@@ -7,6 +7,9 @@ body {
 
 /*Resetando margin, pq por padrão esses elementos têm margin*/
 h1,
+h2,
+h3,
+h4,
 ul,
 p {
   margin: 0px;
@@ -23,7 +26,12 @@ a {
   color: inherit; /*Herda a cor do elemento pai*/
 }
 
-img {
+/*Toda img que tiver src e terminar com .jpg*/
+img[src$=".jpg"] {
+  border-radius: 4px;
+}
+
+img{
   display: block;
   max-width: 100%;
 }

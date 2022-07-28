@@ -15,7 +15,7 @@
 <body>
   <header class="header-bg">
     <!--tag para o background para ir de ponta a ponta-->
-    <div class="header">
+    <div class="header container">
       <!-- tag para segurar o conteudo -->
       <a href="./"><img src="./img/bikcraft.svg" alt="Bikecraft"></a>
 
@@ -30,7 +30,7 @@
   </div>
 
   <main class="introducao-bg">
-    <div class="introducao">
+    <div class="container introducao">
       <div class="introducao-conteudo">
         <!--essa div ajuda a seprar os elementos dentro do grid porque como o grid foi definido em 2 colunas e o display grid foi definido em introducao, os filhos agr são essa div e a img, ou seja disponhe um elemento em uma coluna e o outro na que sobra-->
         <h1 class="font-1-xxl cor-0">Bicicletas feitas sob medida<span class="cor-p1">.</span></h1>
@@ -44,7 +44,38 @@
     </div>
   </main>
 
-  <h2 class="font-1-xxl">escolha a sua<span class="cor-p1">.</span></h2>
+  <article class="bicicletas-lista">
+    <h2 class="container font-1-xxl">escolha a sua<span class="cor-p1">.</span></h2>
+
+    <ul>
+
+      <a href="./bicicletas/magic.html">
+        <li>
+          <img src="./img/bicicletas/magic-home.jpg" alt="Bicicleta preta">
+          <h3 class="font-1-xl">Magic Might</h3>
+          <span class="font-2-m cor-8">R 2499</span>
+        </li>
+      </a>
+
+
+      <a href="./bicicletas/nimbus.html">
+        <li>
+          <img src="./img/bicicletas/nimbus-home.jpg" alt="Bicicleta preta">
+          <h3 class="font-1-xl">Nimbus Stark</h3>
+          <span class="font-2-m cor-8">R 4000</span>
+
+        </li>
+      </a>
+
+      <a href="./bicicletas/nebula.html">
+        <li>
+        <img src="./img/bicicletas/nebula-home.jpg" alt="Bicicleta preta">
+        <h3 class="font-1-xl">Nebula Cosmic</h3>
+        <span class="font-2-m cor-8">R 3999</span>
+        </li>
+      </a>
+    </ul>
+  </article>
 
 </body>
 

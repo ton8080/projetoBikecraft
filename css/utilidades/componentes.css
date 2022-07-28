@@ -1,3 +1,13 @@
+.container{
+    /*Coloca o h2 na mesma posição e container que o outro titulo*/
+    max-width: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box; /*/*Faz com que o valor do padding não some ao width, assim o valor definido no width será o total do elemento, não precisando colocar 1160 para conseguir 1200px de tamanho*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .botao {
   display: inline-block;
   padding: 16px 32px;

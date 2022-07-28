@@ -1,0 +1,78 @@
+.bicicletas-lista {
+  padding-top: 60px;
+  padding-bottom: 120px;
+}
+
+.bicicletas-lista h2 {
+  margin-bottom: 40px;
+}
+
+.bicicletas-lista ul {
+  display: flex;
+  gap: 40px;
+  padding: 0 20px 20px 20px;
+  /* Sempre que tiver um max-width e quiser centralizar tudo, coloque margin-left e margin-right de auto */
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  /* Para o mobile */
+  /*Define o que acontece caso o conteudo estoure so container*/
+  overflow-x: auto; /*Cria uma barra especificadamente na horiontal(-x) apenas para esse elemento, caso ele vaze e só se ele vazar o container(auto)*/
+}
+
+/*Li que é o item flex pq o display flex está no ul*/
+.bicicletas-lista li {
+  flex: 1; /*Coloca um do lado do outro sempre*/
+
+  /* Para o Mobile */
+  /*Define um valor minimo para a largura, sendo que se diminuir mais passa direto(quebra o layout), pois esse valor não diminui seu tamanho e cria um scrool na horizontal*/
+  min-width: 280px;
+}
+
+/*Serve para quando abertar o tap selecionar o item inteiro e não apenas cada parte*/
+.bicicletas-lista a {
+  display: block;
+}
+
+.bicicletas-lista img {
+  margin-bottom: 16px;
+}
+
+.bicicletas-lista h3 {
+  margin-bottom: 8px;
+  /*Serve para definir os filhos como flex itens e poder alinhar todos*/
+  display: flex;
+  align-items: center;
+}
+
+.bicicletas-lista h3::before {
+  display: inline-block;
+  content: "";
+  height: 8px;
+  width: 12px;
+  margin-right: 8px;
+  background-color: var(--cor-p1);
+  transition: width 0.2s; /*Tempo de animção que irá durar entre o estado original h3::before e o estado final a:hover h3::before
+  atente-se ao s no final
+  */
+}
+
+.bicicletas-lista a:hover h3::before {
+  width: 24px;
+}
+
+/*Alinha o preço com o h3*/
+.bicicletas-lista li span {
+  /*Soma da margin-rigth e width*/
+  padding-left: 20px;
+}
+
+@media (max-width: 800px) {
+  .bicicletas-lista {
+    padding-bottom: 60px;
+  }
+
+  .bicicletas-listac ul {
+    gap: 20px;
+  }
+}
