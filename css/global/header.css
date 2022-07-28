@@ -24,7 +24,6 @@
 .header-menu a {
   display: inline-block;
   padding: 16px 0px;
-  font-size: 18px;
   position: relative; /*Se não for definido o absolute fica relacionado ao body, pegadno 100% dele, assim se definir aqui, o aboslute vai pegar 100% do width desse elemento*/
 }
 
