@@ -1,5 +1,5 @@
 .header-bg {
-  background-color: #000;
+  background-color: var(--cor-12);
 }
 
 .header {
@@ -21,6 +21,12 @@
   flex-wrap: wrap; /*Faz com que os elementos filhos de header quebrem linha caso fiquem pequeno*/
   gap: 40px;
 }
+.header-menu a {
+  display: inline-block;
+  padding: 16px 0px;
+  font-size: 18px;
+  position: relative; /*Se não for definido o absolute fica relacionado ao body, pegadno 100% dele, assim se definir aqui, o aboslute vai pegar 100% do width desse elemento*/
+}
 
 /*Cira um detalhe para o menu*/
 .header-menu a::after {
@@ -28,38 +34,30 @@
   display: block;
   height: 2px;
   width: 0px;
-  background-color: #fff;
+  background-color: var(--cor-0);
   margin-top: 4px;
   transition: 0.3s; /*Define quanto tempo deve demorar para sair desse estado para o hover*/
   position: absolute; /*Serve para tirar a altura que foi criada por conta do detalher, para centralizar com a logo*/
 }
 
+/*Aumenta a area de contato(click zone) e define com inline-block para não quebrar e pegar o padding direto*/
+
 .header-menu a:hover:after {
   width: 100%; /*Pega a largura do elemento pai*/
 }
-
-/*Aumenta a area de contato(click zone) e define com inline-block para não quebrar e pegar o padding direto*/
-.header-menu a {
-  color: #fff;
-  display: inline-block;
-  padding: 16px 0px;
-  font-size: 18px;
-  position: relative; /*Se não for definido o absolute fica relacionado ao body, pegadno 100% dele, assim se definir aqui, o aboslute vai pegar 100% do width desse elemento*/
-}
-
 @media (max-width: 800px) {
   .header-menu {
     gap: 20px;
   }
   .header-menu a {
-    background-color: #111;
+    background-color: var(--cor-11);
     padding: 12px 16px;
     border-radius: 4px;
     font-family: "Poppins";
     font-weight: 400;
   }
   .header-menu a:hover {
-    background-color: #2e2e2e;
+    background-color: var(--cor-10);
   }
 
   .header a:after {

@@ -1,8 +1,7 @@
 .introducao-bg {
-  background: #000;
-  color: #fff;
+  background: var(--cor-12);
   /* estilo para parecer que a imagem está vazando */
-  box-shadow: inset 0px -120px #fff; /*cria uma sombra interna(inset) e com o negativo, ela vai ficar para baixo, no final do container, dando uma ilusão que a imagem está sendo vazada
+  box-shadow: inset 0px -120px var(--cor-0); /*cria uma sombra interna(inset) e com o negativo, ela vai ficar para baixo, no final do container, dando uma ilusão que a imagem está sendo vazada
   
   porem precisa compesar o valor do padding no .introdução conteudo, pois assim ele não irá aparentar que todos os itens estão vazando. Basta adicionar 120px aos 80 dele*/
 }
@@ -40,24 +39,11 @@ adicionar classe a div da imagem caso queira testar*/
 }
 
 .introducao h1 {
-  font-size: 64px;
-  line-height: 1.125; /*Define como relativo ao font-size ou seja 72px(tamanho original que queremos quando a font size for 64px) dividido por 64, agr se diminuir a font o line fica equivalente*/
   margin-bottom: 32px;
-  font-family: "Poppins";
-  font-weight: 600;
-}
-
-.introducao h1 span {
-  color: #ffbb00;
 }
 
 .introducao p {
   margin-bottom: 20px;
-  font-size: 24px;
-  line-height: 1.5;
-  color: #b2b2b2;
-  font-family: "Roboto";
-  font-weight: 400;
 }
 
 @media (max-width: 1200px) {
@@ -72,9 +58,9 @@ adicionar classe a div da imagem caso queira testar*/
 
 @media (max-width: 800px) {
   .introducao-bg {
-    background-color: #111;
+    background-color: var(--cor-11);
     padding-top: 40px;
-    box-shadow: inset 0 -60px #fff;
+    box-shadow: inset 0 -60px var(--cor-0);
   }
 
   .introducao {
