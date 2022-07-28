@@ -12,7 +12,7 @@
   gap: 40px;
   padding: 0 20px 20px 20px;
   /* Sempre que tiver um max-width e quiser centralizar tudo, coloque margin-left e margin-right de auto */
-  max-width: 1400px;
+  max-width: 1400px; /*Serve para vazar o cantainer principal de 1200px*/
   margin-left: auto;
   margin-right: auto;
   /* Para o mobile */

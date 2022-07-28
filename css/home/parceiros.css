@@ -1,0 +1,63 @@
+.parceiros{
+  padding-top: 60px;
+  padding-bottom: 120px;
+}
+
+.parceiros h2{
+  margin-bottom: 60px;
+}
+
+.parceiros ul{
+  padding: 0 20px;
+  /* É usado grid, pois ele gera colunas de tamanhos iguais, com flex felx, cada item teria o tamanho de seu conteudo */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1400px; /*Serve para vazar o cantainer principal de 1200px se crescer a cima de 1400 vai começar a centralizar o conteudo, por conta da definida abaixo margin*/
+  margin: 0 top;
+}
+
+.parceiros li{
+  display: flex; /*Para que as img possam ser item flex para centraliza-las*/
+  padding: 32px;
+  /*Adiciona bordas a esquerda de toda li*/
+  border-left: 2px solid var(--cor-2);
+}
+
+.parceiros img{
+  /*Alinha todas imagens ao centro*/
+  margin: auto;
+}
+
+
+/*retira as bordas da esquerda da primeira li e da quinta*/
+.parceiros li:first-child, .parceiros li:nth-child(5){
+  border-left: none;
+}
+
+/* borda no top a partir da quinta li 
+n a partir do 5
+*/
+.parceiros li:nth-child(n + 5){
+  border-top: 2px solid var(--cor-2);
+}
+
+@media (max-width: 800px){
+  .parceiros{
+    padding-bottom: 60px;
+  }
+
+  .parceiros h2{
+    margin-bottom: 20px;
+  }
+
+  .parceiros ul{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .parceiros li:nth-child(n + 3){
+    border-top: 2px solid var(--cor-2);
+  }
+  .parceiros li:nth-child(odd){
+    border-left: none;
+  }
+}
