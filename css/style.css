@@ -3,6 +3,11 @@ body{
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/*Resetando margin, pq por padrão esses elementos têm margin*/
+h1, ul, p{
+  margin: 0px;
+}
+
 ul{
   margin: 0px;
   padding: 0px;
@@ -11,6 +16,12 @@ ul{
 
 a{
   text-decoration: none;
+  color: inherit; /*Herda a cor do elemento pai*/
+}
+
+img{
+  display: block;
+  max-width: 100%;
 }
 
 .header-bg{
@@ -60,6 +71,62 @@ a{
   padding: 16px 0px;
   font-size: 18px;
   position: relative; /*Se não for definido o absolute fica relacionado ao body, pegadno 100% dele, assim se definir aqui, o aboslute vai pegar 100% do width desse elemento*/
+}
+
+.introducao-bg{
+  background: #000;
+  color: #fff;
+}
+
+.introducao{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px 40px; /*cima e baix= 0 e lados = 40*/
+  max-width: 1200px;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.introducao-conteudo{
+  align-self: end; /*Alinha o conteudo da div no final*/
+  padding-bottom: 80px; /*da um espaço  */
+}
+
+.introducao h1{
+  font-size: 64px;
+  line-height: 1.125; /*Define como relativo ao font-size ou seja 72px(tamanho original que queremos quando a font size for 64px) dividido por 64, agr se diminuir a font o line fica equivalente*/
+  margin-bottom: 32px;
+}
+
+.introducao h1 span{
+  color: #FFbb00;
+}
+
+.introducao p{
+  margin-bottom: 20px;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #b2b2b2;
+}
+
+.introducao a{
+  display: inline-block;
+  padding: 16px 32px;
+  background: linear-gradient( #ffbf00, #F2a50c);
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  color: #332200;
+  font-size: 18px;
+  line-height: 1.33;
+  font-weight: bold;
+}
+
+.introducao a:hover{
+  background: linear-gradient( #ffb60d, #e59317);
 }
 
 @media (max-width:800px){
