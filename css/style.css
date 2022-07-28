@@ -1,0 +1,91 @@
+body{
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+.header-bg{
+  background-color: #000;
+}
+
+.header{
+  display: flex;
+  flex-wrap: wrap ; /*Faz com que os elementos filhos de header quebrem linha caso fiquem pequeno*/
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center; /*Alinha os itens um com o outro no centro*/
+  box-sizing: border-box; /*Faz com que o valor do padding não some ao width, assim o valor definido no width será o total do elemento, não precisando colocar 1160 para conseguir 1200px de tamanho*/
+  padding: 20px;
+  max-width: 1200px;
+  /* deixa os itens sempre alinhado aos cantos */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-menu{
+  display: flex;
+  flex-wrap: wrap; /*Faz com que os elementos filhos de header quebrem linha caso fiquem pequeno*/
+  gap: 40px;
+}
+
+/*Cira um detalhe para o menu*/
+.header-menu a::after{
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0px; 
+  background-color: #fff;
+  margin-top: 4px;
+  transition: 0.3s; /*Define quanto tempo deve demorar para sair desse estado para o hover*/
+  position: absolute; /*Serve para tirar a altura que foi criada por conta do detalher, para centralizar com a logo*/
+}
+
+.header-menu a:hover:after{
+  width: 100%; /*Pega a largura do elemento pai*/
+}
+
+/*Aumenta a area de contato(click zone) e define com inline-block para não quebrar e pegar o padding direto*/
+.header-menu a{
+  color: #fff;
+  display: inline-block;
+  padding: 16px 0px;
+  font-size: 18px;
+  position: relative; /*Se não for definido o absolute fica relacionado ao body, pegadno 100% dele, assim se definir aqui, o aboslute vai pegar 100% do width desse elemento*/
+}
+
+@media (max-width:800px){
+  .header-menu{
+    gap: 20px;
+  }
+  .header-menu a{
+    background-color: #111;
+    padding: 12px 16px;
+    border-radius: 4px;
+  }
+  .header-menu a:hover{
+    background-color: #2E2E2E;
+  }
+
+  .header a:after{
+    display: none;
+  }
+}
+
+@media (max-width:600px){
+  .header-menu{
+    gap: 12px;
+  }
+  .header-menu a{
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
