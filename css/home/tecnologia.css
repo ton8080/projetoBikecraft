@@ -1,0 +1,95 @@
+.tecnologia-bg {
+  background-color: var(--cor-11);
+
+  /*Adiciona 2 sombras internas de 80px, uma para o topo(positiva) e uma para o bottom(negativa)*/
+  box-shadow: inset 0 80px var(--cor-0), inset 0 -80px var(--cor-0);
+}
+
+.tecnologia {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.tecnologia-imagem img {
+  width: 100%;
+  height: 100%; /*Sempre ocupa o tamanho do elmento pai, nesse caso .tecnologia*/
+  object-fit: cover; /*Mantem a razão entre altura e largura*/
+  object-position: left; /*Fica sempre alinhada a esquerda, e se preciso começa cortar da direita*/
+}
+
+.tecnologia-conteudo {
+  padding-top: 160px; /*Distancia referente ao inicio do conteudo(parte oreta com os titulos e tudo mais) e o topo da imagem vazada + a distancia em relação ao inicio do onteudo e o topo do da parte preta(sem a shadow-box)= 80px+80px*/
+  padding-bottom: 160px; /*mesma coisa do de cima, porem para o boottom*/
+}
+
+/*span logo após a classe(interno) = filho direto da div .tecnologia-conteudo*/
+.tecnologia-conteudo > span{
+  /* span por padrão é display inline e não pega a margin, por isso é necessario display block */
+  display: block;
+  margin-bottom: 20px;
+}
+
+.tecnologia-conteudo h2{
+  margin-bottom: 32px;
+}
+
+/*p logo após a classe(interno) = filho direto da div .tecnologia-conteudo*/
+.tecnologia-conteudo > p{
+  margin-bottom: 20px;
+}
+
+.tecnologia a{
+  margin-bottom: 80px;
+}
+
+
+.tecnologia-vantagens{
+  display: flex;
+  gap: 40px;
+}
+
+.tecnologia-vantagens h3{
+  margin-bottom: 8px;
+  width: max-content; /*serve para nunca quebrar o titulo, pois ele sempre terá a largura do seu conteudo(oq está escrito nele)*/
+}
+
+/*Diminui o icone*/
+.tecnologia-vantagens img{
+  width: 24px;
+  margin-bottom: 8px;
+}
+
+
+@media (max-width: 800px){
+  .tecnologia-bg{
+    box-shadow: initial; /*Valor inicial = none*/
+  }
+
+  .tecnologia{
+    grid-template-columns: 1fr;
+  }
+
+  /*Diminui o padding do conteudo para o mobile*/
+  .tecnologia-conteudo{
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  /*Retira a imagem para o mobile, pois ela é apenas decorativa e fica melhor assim*/
+  .tecnologia img{
+    display: none;
+  }
+
+  .tecnologia a{
+    margin-bottom: 60px;
+  }
+  
+}
+
+@media (max-width: 600px){
+  /*Quando a tela ficar a baixo de 600px, muda a direção de como os itens ficam alinhados, por padrão o flex deixa um do lado do outro, assim ele coloca um embaixo do outro*/
+  .tecnologia-vantagens{
+    flex-direction: column;
+  }
+}
