@@ -45,6 +45,9 @@ n a partir do 5
   .parceiros{
     padding-bottom: 60px;
   }
+  .parceiros li{
+  display: flex; /*Para que as img possam ser item flex para centraliza-las*/
+  padding: 20px;}
 
   .parceiros h2{
     margin-bottom: 20px;
